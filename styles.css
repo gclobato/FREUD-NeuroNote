@@ -6,9 +6,24 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0;
+    background: url('Sigmund-Freud-Wallpaper-Full-HD.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* White overlay with 80% opacity */
+    z-index: 1;
 }
 
 .container {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
