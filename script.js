@@ -2,12 +2,6 @@ const addEntryButton = document.getElementById('add-entry-button');
 const entriesContainer = document.getElementById('entries-container');
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-const recognition = new SpeechRecognition();
-recognition.continuous = true;
-recognition.interimResults = true;
-recognition.lang = 'pt-BR';
-
-let activeTextArea = null;
 
 addEntryButton.addEventListener('click', () => {
     const entryDiv = document.createElement('div');
@@ -21,7 +15,12 @@ addEntryButton.addEventListener('click', () => {
     const micButton = document.createElement('button');
     micButton.textContent = '🎤';
     micButton.classList.add('mic-button');
-    
+
+    const recognition = new SpeechRecognition();
+    recognition.continuous = true;
+    recognition.interimResults = true;
+    recognition.lang = 'pt-BR';
+
     micButton.addEventListener('click', () => {
         if (recognition.recognizing) {
             recognition.stop();
