@@ -31,7 +31,8 @@ body {
     max-width: 500px;
 }
 
-#add-entry-button {
+#add-entry-button,
+#export-button {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
@@ -62,6 +63,12 @@ input[type="date"] {
     font-size: 16px;
 }
 
+input[type="date"]::before {
+    content: attr(placeholder);
+    color: #999;
+    display: block;
+}
+
 textarea {
     height: 100px;
     padding: 10px;
@@ -72,7 +79,8 @@ textarea {
     font-size: 16px;
 }
 
-.mic-button {
+.mic-button,
+.stop-button {
     font-size: 24px;
     cursor: pointer;
     text-align: center;
@@ -86,11 +94,12 @@ textarea {
     }
 
     .entry textarea {
-        width: calc(100% - 60px);
+        width: calc(100% - 120px);
         margin-left: 10px;
     }
 
-    .mic-button {
+    .mic-button,
+    .stop-button {
         margin-left: 10px;
     }
 }
