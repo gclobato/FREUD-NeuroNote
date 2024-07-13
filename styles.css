@@ -17,7 +17,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.8); /* White overlay with 80% opacity */
+    background: rgba(255, 255, 255, 0.3); /* White overlay with 80% opacity */
     z-index: 1;
 }
 
@@ -79,11 +79,27 @@ textarea {
     font-size: 16px;
 }
 
-.mic-button,
+.mic-button {
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .stop-button {
     font-size: 24px;
     cursor: pointer;
     text-align: center;
+    background-color: #f44336; /* Red background */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
 }
 
 /* Media Queries */
@@ -94,7 +110,7 @@ textarea {
     }
 
     .entry textarea {
-        width: calc(100% - 120px);
+        width: calc(100% - 140px);
         margin-left: 10px;
     }
 
