@@ -21,9 +21,8 @@ addEntryButton.addEventListener('click', () => {
     micButton.classList.add('mic-button');
     
     const stopButton = document.createElement('button');
-    stopButton.textContent = '⏹️';
+    stopButton.textContent = '✋'; // Hand stop icon
     stopButton.classList.add('stop-button');
-    stopButton.style.display = 'none'; // Initially hidden
     
     const recognition = new SpeechRecognition();
     recognition.continuous = true;
